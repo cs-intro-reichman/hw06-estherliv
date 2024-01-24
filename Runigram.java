@@ -40,9 +40,9 @@ public class Runigram {
 		int r, g, b;
 		for (int i = 0; i < numRows; i++) {
 			for (int j = 0; j < numCols; j++) {
-				r = StdIn.readInt();
-				g = StdIn.readInt();
-				b = StdIn.readInt();
+				r = in.readInt();
+				g = in.readInt();
+				b = in.readInt();
 				image[i][j] = new Color(r, g, b);
 			}
 		}
