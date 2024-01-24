@@ -185,6 +185,12 @@ public class Runigram {
 			show(blend(source, target, (double) (n - i) / (double) n));
 		}
 	}
+
+	public static void show(Color[][] image) {
+		setCanvas(image);
+		display(image);
+		StdDraw.show();
+	}
 	
 	/** Creates a canvas for the given image. */
 	public static void setCanvas(Color[][] image) {
