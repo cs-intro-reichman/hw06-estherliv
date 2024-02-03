@@ -66,6 +66,7 @@ public class Runigram {
 	private static void print(Color[][] image) {
 		for (int i = 0; i < image.length; i++) {
 			for (int j = 0; j < image[i].length; j++) {
+				// #feedback - you should use the above print(Color c) function.
 				Color pixel = image[i][j];
 				System.out.printf("(%3d,%3d,%3d) ", pixel.getRed(), pixel.getGreen(), pixel.getBlue());
 			}
@@ -181,14 +182,14 @@ public class Runigram {
 		if (source.length != target.length || source[0].length != target[0].length) {
 			target = scaled(target, source[0].length, source.length);
 		}
-		for (int i = 0; i < n; i++) {
+		for (int i = 0; i < n; i++) { // #feedback - the loop should include n to fully reach the target image.
 			show(blend(source, target, (double) (n - i) / (double) n));
 		}
 	}
 
 	public static void show(Color[][] image) {
 		setCanvas(image);
-		display(image);
+		display(image); // #feedback - using display only should be enough here.
 		StdDraw.show();
 	}
 	
